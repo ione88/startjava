@@ -1,27 +1,32 @@
 public class Calculator {	
 	public static void main(String[] args) {
 		int first = 5;
-		int second = 6;
-		char binaryOperator = '-';
+		int second = 2;
+		char binaryOperator = '^';
 
+		int result = first;
+		boolean isUnknownOperator = false;
 		if (binaryOperator == '+') {
-			System.out.println(first + second);
+			result += second;
 		} else if (binaryOperator == '-') {
-			System.out.println(first - second);
+			result -= second;
 		} else if (binaryOperator == '*') {
-			System.out.println(first * second);
+			result *= second;
 		} else if (binaryOperator == '/') {
-			System.out.println(first / second);
+			result /= second;
 		} else if (binaryOperator == '%') {
-			System.out.println(first % second);
+			result %= second;
 		} else if (binaryOperator == '^') {
-			int result = 1;
-			for (int power = 0; power < second; power++){
+			for (int power = 1; power < second; power++){
 				result *= first;
 			}
-			System.out.println(result);
 		} else {
-			System.out.println("Unknown Operator: '" + binaryOperator + "'");
+			isUnknownOperator = true;
+		}
+		if (isUnknownOperator){
+			System.out.println("ERROR: Unknown operator '" + binaryOperator + "'");
+		} else{
+			System.out.println(first + " " + binaryOperator + " " + second + " = " + result);					
 		}
 	}
 }
