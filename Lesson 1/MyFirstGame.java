@@ -9,16 +9,16 @@ public class MyFirstGame {
         while (userAttempt != secretNumber) {
             System.out.println(">>" + userAttempt);               
             if (userAttempt > secretNumber) {
-                System.out.println("<< Ââåäåííîå âàìè ÷èñëî áîëüøå òîãî, ÷òî çàãàäàë êîìïüþòåð");   
+                System.out.println("<< Ð’Ð²ÐµÐ´ÐµÐ½Ð½Ð¾Ðµ Ð²Ð°Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð¾ Ð±Ð¾Ð»ÑŒÑˆÐµ Ñ‚Ð¾Ð³Ð¾, Ñ‡Ñ‚Ð¾ Ð·Ð°Ð³Ð°Ð´Ð°Ð» ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€");   
                 right = userAttempt;
                 userAttempt = (left + userAttempt) / 2;
             } else {
-                System.out.println("<< Ââåäåííîå âàìè ÷èñëî ìåíüøå òîãî, ÷òî çàãàäàë êîìïüþòåð");  
+                System.out.println("<< Ð’Ð²ÐµÐ´ÐµÐ½Ð½Ð¾Ðµ Ð²Ð°Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð¾ Ð¼ÐµÐ½ÑŒÑˆÐµ Ñ‚Ð¾Ð³Ð¾, Ñ‡Ñ‚Ð¾ Ð·Ð°Ð³Ð°Ð´Ð°Ð» ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€");  
                 left = userAttempt;
                 userAttempt = (userAttempt + right) / 2;
             }
         }
         System.out.println(">>" + userAttempt);   
-        System.out.println("<< Âû óãàäàëè!");  
+        System.out.println("<< Ð’Ñ‹ ÑƒÐ³Ð°Ð´Ð°Ð»Ð¸!");  
 	}
 }
