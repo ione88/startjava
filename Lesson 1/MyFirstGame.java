@@ -5,7 +5,7 @@ public class MyFirstGame {
 
         int secretNumber = 51;
 
-		int userAttempt = (right + left) / 2;
+        int userAttempt = (right + left) / 2;
         while (userAttempt != secretNumber) {
             System.out.println(">>" + userAttempt);               
             if (userAttempt > secretNumber) {
