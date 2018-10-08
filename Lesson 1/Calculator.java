@@ -24,6 +24,6 @@ public class Calculator {
 			return;
 		}
 		
-        System.out.println(firstElement + " " + command + " " + secondElement + " = " + result);					
+		System.out.println(firstElement + " " + command + " " + secondElement + " = " + result);					
 	}
 }
