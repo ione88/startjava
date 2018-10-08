@@ -1,32 +1,29 @@
 public class Calculator {	
 	public static void main(String[] args) {
-		int first = 5;
-		int second = 2;
-		char binaryOperator = '^';
+		int firstElement = 5;
+		int secondElement = 2;
+		char command = '^';
+		int result = 1;
 
-		int result = first;
-		boolean isUnknownOperator = false;
-		if (binaryOperator == '+') {
-			result += second;
-		} else if (binaryOperator == '-') {
-			result -= second;
-		} else if (binaryOperator == '*') {
-			result *= second;
-		} else if (binaryOperator == '/') {
-			result /= second;
-		} else if (binaryOperator == '%') {
-			result %= second;
-		} else if (binaryOperator == '^') {
-			for (int power = 1; power < second; power++){
-				result *= first;
+		if (command == '+') {
+			result = firstElement + secondElement;
+		} else if (command == '-') {
+			result = firstElement - secondElement;
+		} else if (command == '*') {
+			result = firstElement * secondElement;
+		} else if (command == '/') {
+			result = firstElement / secondElement;
+		} else if (command == '%') {
+			result = firstElement % secondElement;
+		} else if (command == '^') {
+			for (int power = 0; power < secondElement; power++){
+				result *= firstElement;
 			}
 		} else {
-			isUnknownOperator = true;
+			System.out.println("ERROR: Unknown operator '" + command + "'");
+			return;
 		}
-		if (isUnknownOperator){
-			System.out.println("ERROR: Unknown operator '" + binaryOperator + "'");
-		} else{
-			System.out.println(first + " " + binaryOperator + " " + second + " = " + result);					
-		}
+		
+        System.out.println(firstElement + " " + command + " " + secondElement + " = " + result);					
 	}
 }
